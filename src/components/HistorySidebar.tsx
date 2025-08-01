@@ -28,7 +28,7 @@ export const HistorySidebar = ({ isOpen, onToggle }: HistorySidebarProps) => {
       <Button
         onClick={onToggle}
         variant="ghost"
-        className="fixed top-4 left-4 z-50 bg-sidebar-bg border-0 text-foreground hover:bg-muted/50 rounded-lg px-4 py-2"
+        className="fixed top-4 left-4 z-50 bg-muted/40 border border-border/50 text-foreground hover:bg-muted/60 rounded-lg px-4 py-2 shadow-lg"
       >
         History
       </Button>
