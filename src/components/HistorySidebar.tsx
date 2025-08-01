@@ -35,7 +35,7 @@ export const HistorySidebar = ({ isOpen, onToggle }: HistorySidebarProps) => {
 
       {/* History Sidebar */}
       <div
-        className={`fixed left-0 top-0 h-full bg-sidebar-bg border-r border-border transition-all duration-300 z-40 ${
+        className={`fixed left-0 top-0 h-full bg-transparent border-r border-border/30 transition-all duration-300 z-40 ${
           isOpen ? "w-80 translate-x-0" : "w-0 -translate-x-full"
         }`}
       >
@@ -50,10 +50,10 @@ export const HistorySidebar = ({ isOpen, onToggle }: HistorySidebarProps) => {
                     key={chat.id}
                     className="p-3 rounded-lg bg-muted/30 hover:bg-muted/50 cursor-pointer transition-colors border border-border/50"
                   >
-                    <h3 className="font-medium text-foreground text-sm mb-1">
+                    <h3 className="font-medium text-foreground text-sm mb-1 break-words">
                       {chat.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground">{chat.date}</p>
+                    <p className="text-xs text-muted-foreground break-words">{chat.date}</p>
                   </div>
                 ))}
               </div>

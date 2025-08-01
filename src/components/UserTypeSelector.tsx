@@ -17,7 +17,7 @@ export const UserTypeSelector = ({ onSelect }: UserTypeSelectorProps) => {
 
   return (
     <div className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center p-6">
-      <Card className="w-full max-w-2xl bg-card border-border shadow-xl animate-scale-in">
+      <Card className="w-full max-w-2xl bg-card border-border shadow-2xl animate-scale-in" style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
         <div className="p-8 text-center">
           <div className="bg-gradient-to-r from-primary to-primary/80 p-4 rounded-full w-16 h-16 mx-auto mb-6 shadow-glow">
             <Briefcase className="w-8 h-8 text-primary-foreground mx-auto" />
@@ -33,11 +33,12 @@ export const UserTypeSelector = ({ onSelect }: UserTypeSelectorProps) => {
             <Button
               onClick={() => handleSelect('student')}
               variant="outline"
-              className={`h-32 flex-col bg-muted/20 hover:bg-muted/40 border-2 transition-all duration-300 ${
+              className={`h-32 flex-col bg-muted/20 hover:bg-muted/40 border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${
                 selectedType === 'student' 
                   ? 'border-primary bg-primary/10 shadow-glow' 
                   : 'border-border hover:border-primary/50'
               }`}
+              style={{ boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)' }}
             >
               <div className="flex items-center justify-between w-full mb-3">
                 <GraduationCap className="w-8 h-8 text-primary" />
@@ -47,7 +48,7 @@ export const UserTypeSelector = ({ onSelect }: UserTypeSelectorProps) => {
               </div>
               <div className="text-left w-full">
                 <h3 className="font-semibold text-foreground text-lg mb-1">Student</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground break-words">
                   Learning about finance, investments, and market fundamentals
                 </p>
               </div>
@@ -57,11 +58,12 @@ export const UserTypeSelector = ({ onSelect }: UserTypeSelectorProps) => {
             <Button
               onClick={() => handleSelect('professional')}
               variant="outline"
-              className={`h-32 flex-col bg-muted/20 hover:bg-muted/40 border-2 transition-all duration-300 ${
+              className={`h-32 flex-col bg-muted/20 hover:bg-muted/40 border-2 transition-all duration-300 shadow-lg hover:shadow-xl ${
                 selectedType === 'professional' 
                   ? 'border-primary bg-primary/10 shadow-glow' 
                   : 'border-border hover:border-primary/50'
               }`}
+              style={{ boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)' }}
             >
               <div className="flex items-center justify-between w-full mb-3">
                 <Briefcase className="w-8 h-8 text-primary" />
@@ -71,7 +73,7 @@ export const UserTypeSelector = ({ onSelect }: UserTypeSelectorProps) => {
               </div>
               <div className="text-left w-full">
                 <h3 className="font-semibold text-foreground text-lg mb-1">Professional</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground break-words">
                   Advanced financial analysis, trading strategies, and market insights
                 </p>
               </div>

@@ -13,13 +13,15 @@ interface Message {
 
 interface ChatInterfaceProps {
   historyOpen: boolean;
+  userType?: 'student' | 'professional';
 }
 
-export const ChatInterface = ({ historyOpen }: ChatInterfaceProps) => {
+export const ChatInterface = ({ historyOpen, userType }: ChatInterfaceProps) => {
+  const chatbotName = userType === 'student' ? 'Icarus' : userType === 'professional' ? 'Orion' : 'Financia';
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      content: "Hello! I'm Financia, your AI financial assistant. How can I help you with your financial queries today?",
+      content: `Hello! I'm ${userType === 'student' ? 'Icarus' : userType === 'professional' ? 'Orion' : 'Financia'}, your AI financial assistant. How can I help you with your financial queries today?`,
       sender: "bot",
       timestamp: new Date(),
     },
@@ -63,7 +65,7 @@ export const ChatInterface = ({ historyOpen }: ChatInterfaceProps) => {
           <div className="bg-gradient-to-r from-primary to-primary/80 p-3 rounded-full mr-4 shadow-lg">
             <Bot className="w-6 h-6 text-primary-foreground" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Financia</h1>
+          <h1 className="text-2xl font-bold text-foreground">{chatbotName}</h1>
         </div>
       </div>
 
@@ -96,7 +98,7 @@ export const ChatInterface = ({ historyOpen }: ChatInterfaceProps) => {
                     : "bg-muted/30 text-foreground mr-12 border border-border/50"
                 }`}
               >
-                <p className="text-sm leading-relaxed">{message.content}</p>
+                <p className="text-sm leading-relaxed break-words">{message.content}</p>
                 <span className="text-xs text-muted-foreground mt-2 block">
                   {message.timestamp.toLocaleTimeString()}
                 </span>
@@ -114,7 +116,7 @@ export const ChatInterface = ({ historyOpen }: ChatInterfaceProps) => {
               <Textarea
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                placeholder="Ask Financia about markets, investments, or financial advice..."
+                placeholder={`Ask ${chatbotName} about markets, investments, or financial advice...`}
                 className="min-h-[60px] max-h-32 resize-none bg-background border-border text-foreground placeholder:text-muted-foreground rounded-xl"
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && !e.shiftKey) {

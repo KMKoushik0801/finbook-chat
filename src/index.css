@@ -10,6 +10,9 @@ All colors MUST be HSL.
   :root {
     --background: 250 20% 8%;
     --foreground: 48 100% 95%;
+    
+    /* Serif font system */
+    --font-serif: 'Georgia', 'Times New Roman', serif;
 
     --card: 250 15% 12%;
     --card-foreground: 48 100% 95%;
@@ -111,5 +114,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: Georgia, 'Times New Roman', serif;
   }
 }

@@ -29,7 +29,7 @@ const Index = () => {
         <HistorySidebar isOpen={historyOpen} onToggle={toggleHistory} />
 
         {/* Chat Interface */}
-        <ChatInterface historyOpen={historyOpen} />
+        <ChatInterface historyOpen={historyOpen} userType={userType || undefined} />
 
         {/* News Panel */}
         <NewsPanel />
