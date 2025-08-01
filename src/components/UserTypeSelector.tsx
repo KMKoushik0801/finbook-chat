@@ -48,9 +48,6 @@ export const UserTypeSelector = ({ onSelect }: UserTypeSelectorProps) => {
               </div>
               <div className="text-left w-full">
                 <h3 className="font-semibold text-foreground text-lg mb-1">Student</h3>
-                <p className="text-sm text-muted-foreground break-words">
-                  Learning about finance, investments, and market fundamentals
-                </p>
               </div>
             </Button>
 
@@ -73,9 +70,6 @@ export const UserTypeSelector = ({ onSelect }: UserTypeSelectorProps) => {
               </div>
               <div className="text-left w-full">
                 <h3 className="font-semibold text-foreground text-lg mb-1">Professional</h3>
-                <p className="text-sm text-muted-foreground break-words">
-                  Advanced financial analysis, trading strategies, and market insights
-                </p>
               </div>
             </Button>
           </div>
