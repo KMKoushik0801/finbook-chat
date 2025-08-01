@@ -48,12 +48,12 @@ export const HistorySidebar = ({ isOpen, onToggle }: HistorySidebarProps) => {
                 {chatHistory.map((chat) => (
                   <div
                     key={chat.id}
-                    className="p-3 rounded-lg bg-muted/30 hover:bg-muted/50 cursor-pointer transition-colors border border-border/50"
+                    className="p-3 rounded-lg bg-transparent hover:bg-muted/20 cursor-pointer transition-colors border border-transparent hover:border-border/30"
                   >
-                    <h3 className="font-medium text-foreground text-sm mb-1 break-words">
+                    <h3 className="font-medium text-foreground/80 text-sm mb-1 break-words">
                       {chat.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground break-words">{chat.date}</p>
+                    <p className="text-xs text-muted-foreground/70 break-words">{chat.date}</p>
                   </div>
                 ))}
               </div>
