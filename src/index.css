@@ -8,35 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 250 20% 8%;
+    --foreground: 48 100% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 250 15% 12%;
+    --card-foreground: 48 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 250 15% 12%;
+    --popover-foreground: 48 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 100% 50%;
+    --primary-foreground: 250 20% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 250 10% 18%;
+    --secondary-foreground: 48 100% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 250 8% 16%;
+    --muted-foreground: 48 30% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 250 15% 20%;
+    --accent-foreground: 48 100% 95%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 48 100% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 250 8% 22%;
+    --input: 250 8% 18%;
+    --ring: 45 100% 50%;
 
-    --radius: 0.5rem;
+    --chat-background: 250 12% 14%;
+    --news-background: 250 8% 10%;
+    --sidebar-background: 250 8% 10%;
+    
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 100% 45%));
+    --gradient-purple: linear-gradient(180deg, hsl(250 20% 8%), hsl(250 15% 6%));
+    
+    --shadow-glow: 0 0 30px hsl(45 100% 50% / 0.2);
+    --shadow-subtle: 0 4px 20px hsl(250 30% 4% / 0.3);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
